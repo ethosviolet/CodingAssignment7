@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Jacob Hobzek">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja, Hunter, Bear</title>
+    
+</head>
+<body>
+<p id="info"></p>   <!-- The reference for the getelementbyID.innerhtml must be in the body before the script-->
+<p id="result"></p> <!-- The reference for the getelementbyID.innerhtml (result) for the result of the game-->
+<script>
+  let user = prompt('This is Ninja, Bear, Hunter. Please enter your name to get started:'); // user variable is entered with prompt message
+  let greeting = `You have entered: ${user}`; // greeting is defined as the name you entered in a template literal
+      console.log(greeting + ' Welcome to Ninja, Bear, Hunter.'); //console log displays text from greeting + additional greeting text
+if (user) {alert(greeting + ' Welcome to Ninja, Bear, Hunter.')} // conditional for the entered username pushes an alert with greeting text and welcome message
+ let fighter = prompt('Are you a Ninja, Bear, or Hunter?') // fighter variable is entered with prompt message
+  document.getElementById("info").innerHTML = `${user}, you picked ${fighter}.` +  " The computer picked Bear."; // html document operator.method of data transmission("identifier").withinidentifiertags operates as user (tl) picked fighter (tl) + hardcoded computer choice
+    console.log(`${user}, you picked ${fighter}.` +  " The computer picked Bear." ); // console displays user (tl) picked fighter (tl) + Computer hardcode choice
+if ((fighter === 'Ninja') || (fighter === 'ninja'))
+{console.log("You Lose");
+document.getElementById("result").innerHTML = "You Lose";
+}
+else if ((fighter === 'hunter') || (fighter === 'Hunter'))
+{console.log("You Win");
+document.getElementById("result").innerHTML = "You Win";
+}
+else if ((fighter === 'Bear') || (fighter === 'bear')) 
+{console.log("You Tied");
+document.getElementById("result").innerHTML = "You Tied";
+};
+ </script>
+</body>
+</html>
