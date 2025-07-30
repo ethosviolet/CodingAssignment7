@@ -18,18 +18,21 @@ if (user) {alert(greeting + ' Welcome to Ninja, Bear, Hunter.')} // conditional 
  let fighter = prompt('Are you a Ninja, Bear, or Hunter?') // fighter variable is entered with prompt message
   document.getElementById("info").innerHTML = `${user}, you picked ${fighter}.` +  " The computer picked Bear."; // html document operator.method of data transmission("identifier").withinidentifiertags operates as user (tl) picked fighter (tl) + hardcoded computer choice
     console.log(`${user}, you picked ${fighter}.` +  " The computer picked Bear." ); // console displays user (tl) picked fighter (tl) + Computer hardcode choice
-if ((fighter === 'Ninja') || (fighter === 'ninja'))
-{console.log("You Lose");
-document.getElementById("result").innerHTML = "You Lose";
+if ((fighter === 'Ninja') || (fighter === 'ninja')) //first if in this if else ladder evaluates for the losing condition in this assignment. Ninja loses to Bear.
+{console.log("You Lose");// sent message to console 
+document.getElementById("result").innerHTML = "You Lose";//sent status to html id="result"
 }
-else if ((fighter === 'hunter') || (fighter === 'Hunter'))
-{console.log("You Win");
-document.getElementById("result").innerHTML = "You Win";
+else if ((fighter === 'hunter') || (fighter === 'Hunter'))// 2nd else if evaluates for Hunter (win)
+{console.log("You Win");//to console
+document.getElementById("result").innerHTML = "You Win";//status message
 }
-else if ((fighter === 'Bear') || (fighter === 'bear')) 
-{console.log("You Tied");
-document.getElementById("result").innerHTML = "You Tied";
-};
- </script>
+else if ((fighter === 'Bear') || (fighter === 'bear')) //3rd evaluates for tied with computer's hardcode choice
+{console.log("You Tied");//to console
+document.getElementById("result").innerHTML = "You Tied"}//status message
+else // ending ladder with an else statement, any other value would be considered an error
+{console.log("Error: Incorrect value entered");//to console
+document.getElementById("result").innerHTML = "Error: Incorrect value entered"};//status message
+</script>
 </body>
+
 </html>
