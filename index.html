@@ -8,27 +8,30 @@
     
 </head>
 <body>
-<p id="info"></p>   <!-- The reference for the getelementbyID.innerhtml must be in the body before the script.. info about your name and choice to be displayd here.-->
+<p id="choice"></p>
+<p id="computer"></p>   <!-- The reference for the getelementbyID.innerhtml must be in the body before the script.. info about your name and choice to be displayd here.-->
 <p id="result"></p> <!-- The reference for the getelementbyID.innerhtml (result) for the result of the game-->
 <script>
-  let user = prompt('This is Ninja, Bear, Hunter. Please enter your name to get started:'); // user variable is entered with prompt message
-  let greeting = `You have entered: ${user}`; // greeting is defined as the name you entered in a template literal
-      console.log(greeting + ' Welcome to Ninja, Bear, Hunter.'); //console log displays text from greeting + additional greeting text
-if (user) {alert(greeting + ' Welcome to Ninja, Bear, Hunter.')} // conditional for the entered username pushes an alert with greeting text and welcome message
- let fighter = prompt('Are you a Ninja, Bear, or Hunter?') // fighter variable is entered with prompt message
-  document.getElementById("info").innerHTML = `${user}, you picked ${fighter}.` +  " The computer picked Bear."; // html document operator.method of data transmission("identifier").withinidentifiertags operates as user (tl) picked fighter (tl) + hardcoded computer choice
-    console.log(`${user}, you picked ${fighter}.` +  " The computer picked Bear." ); // console displays user (tl) picked fighter (tl) + Computer hardcode choice
-if ((fighter === 'ninja')) //first if in this if else ladder evaluates for the losing condition in this assignment. Ninja loses to Bear.
+  let user = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:'); // user variable is entered with prompt message
+  let greeting = `Hi ${user}`; // greeting is defined as the name you entered in a template literal
+      console.log(greeting + ' Let\'s play '); //console log displays text from greeting + additional greeting text
+if (user) {alert(greeting + ' Let\'s play ')} // conditional for the entered username pushes an alert with greeting text and welcome message
+ let fighter = prompt('Who are you: Bear, Ninja, or Hunter?') // fighter variable is entered with prompt message
+  document.getElementById("choice").innerHTML = `${user} you chose ${fighter}!`; // html document operator.method of data transmission("identifier").withinidentifiertags operates as user (tl) picked fighter (tl)
+    console.log(`${user} you chose ${fighter}!`); // console displays user (tl) picked fighter (tl)
+    document.getElementById("computer").innerHTML = `The computer chose Bear!`;
+    console.log(`The computer chose bear!`);
+if (fighter === 'ninja') //first if in this if else ladder evaluates for the losing condition in this assignment. Ninja loses to Bear.
 {console.log("You Lose");// sent message to console 
-document.getElementById("result").innerHTML = "You Lose";//sent status to html id="result"
+document.getElementById("result").innerHTML = "You Lose!";//sent status to html id="result"
 }
-else if ((fighter === 'hunter'))// 2nd else if evaluates for Hunter (win)
+else if (fighter === 'hunter')// 2nd else if evaluates for Hunter (win)
 {console.log("You Win");//to console
-document.getElementById("result").innerHTML = "You Win";//status message
+document.getElementById("result").innerHTML = "You Win!";//status message
 }
-else if ((fighter === 'bear')) //3rd evaluates for tied with computer's hardcode choice
+else if (fighter === 'bear') //3rd evaluates for tied with computer's hardcode choice
 {console.log("You Tied");//to console
-document.getElementById("result").innerHTML = "You Tied"}//status message
+document.getElementById("result").innerHTML = "You Tied!"};//status message
 </script>
 </body>
 
